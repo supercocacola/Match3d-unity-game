@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GameplayFruitAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 65
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4913ce5f0c5b2a44eb700e9674b3b85c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4aade970bd310bf41999ff1d6929698d, type: 3}
+  - {fileID: 21300000, guid: 5ead70314c8057e4fbad1171b57e2285, type: 3}
+  - {fileID: 21300000, guid: ad0255438bdaee746942172f60838326, type: 3}
+  - {fileID: 21300000, guid: 9155563869121a64691c05bc3ca52e14, type: 3}
+  - {fileID: 21300000, guid: e5fea27bcfb023d4fa4f7b314a1e468f, type: 3}
+  - {fileID: 21300000, guid: d7048b7b19e3543408d95e06436ae3d7, type: 3}
+  - {fileID: 21300000, guid: 7164e9eb7829dfb4595431d2eb01fc76, type: 3}
+  - {fileID: 21300000, guid: fa170d4df6f61ca4d87906fecd033754, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - characters_0005
+  - characters_0004
+  - characters_0003
+  - characters_0006
+  - characters_0001
+  - bombColor
+  - characters_0007
+  - characters_0002
+  m_RenderDataMap: {}
+  m_Tag: GameplayFruitAtlas
+  m_IsVariant: 0
