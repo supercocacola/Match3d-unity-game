@@ -28,13 +28,13 @@ public class BonusItem : Item
             case eBonusType.NONE:
                 break;
             case eBonusType.HORIZONTAL:
-                prefabname = Constants.PREFAB_BONUS_HORIZONTAL;
+                prefabname = Constants.POOL_BONUS_HORIZONTAL;
                 break;
             case eBonusType.VERTICAL:
-                prefabname = Constants.PREFAB_BONUS_VERTICAL;
+                prefabname = Constants.POOL_BONUS_VERTICAL;
                 break;
             case eBonusType.ALL:
-                prefabname = Constants.PREFAB_BONUS_BOMB;
+                prefabname = Constants.POOL_BONUS_BOMB;
                 break;
         }
 

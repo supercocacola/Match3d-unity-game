@@ -23,4 +23,26 @@
     public const string PREFAB_BONUS_VERTICAL = "prefabs/itemBonusVertical";
 
     public const string PREFAB_BONUS_BOMB = "prefabs/itemBonusBomb";
+
+    public const string POOL_CELL_BACKGROUND = "pools/cellBackground";
+
+    public const string POOL_NORMAL_TYPE_ONE = "pools/itemNormal01";
+
+    public const string POOL_NORMAL_TYPE_TWO = "pools/itemNormal02";
+
+    public const string POOL_NORMAL_TYPE_THREE = "pools/itemNormal03";
+
+    public const string POOL_NORMAL_TYPE_FOUR = "pools/itemNormal04";
+
+    public const string POOL_NORMAL_TYPE_FIVE = "pools/itemNormal05";
+
+    public const string POOL_NORMAL_TYPE_SIX = "pools/itemNormal06";
+
+    public const string POOL_NORMAL_TYPE_SEVEN = "pools/itemNormal07";
+
+    public const string POOL_BONUS_HORIZONTAL = "pools/itemBonusHorizontal";
+
+    public const string POOL_BONUS_VERTICAL = "pools/itemBonusVertical";
+
+    public const string POOL_BONUS_BOMB = "pools/itemBonusBomb";
 }

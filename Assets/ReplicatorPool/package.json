@@ -1,0 +1,8 @@
+{
+    "name": "com.replicator.pooling",
+    "description": "Whooshy GameObject pooling / reuse for Unity.",
+    "version": "0.1.0",
+    "unity": "2019.3",
+    "displayName": "ReplicatorPooling",
+    "dependencies": {}
+}
