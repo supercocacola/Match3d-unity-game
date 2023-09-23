@@ -46,6 +46,11 @@ public class BoardController : MonoBehaviour
         Fill();
     }
 
+    public void RestartGame()
+    {
+        Fill();
+    }
+
     private void Fill()
     {
         m_board.Fill();

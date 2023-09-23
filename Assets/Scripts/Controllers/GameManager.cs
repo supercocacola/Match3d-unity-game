@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         GAME_STARTED,
         PAUSE,
         GAME_OVER,
+        RESTART
     }
 
     private eStateGame m_state;
@@ -44,7 +45,9 @@ public class GameManager : MonoBehaviour
     private UIMainManager m_uiMenu;
 
     private LevelCondition m_levelCondition;
+    private eLevelMode currentMode;
     public ItemDatas m_itemDatas;
+    
 
     private void Awake()
     {
@@ -85,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(eLevelMode mode)
     {
+        currentMode = mode;
         m_boardController = new GameObject("BoardController").AddComponent<BoardController>();
         m_boardController.StartGame(this, m_gameSettings);
 
@@ -137,5 +141,10 @@ public class GameManager : MonoBehaviour
             Destroy(m_levelCondition);
             m_levelCondition = null;
         }
+    }
+
+    public void Restart()
+    {
+        LoadLevel(currentMode);
     }
 }
