@@ -12,6 +12,7 @@ public class Item
 
     public Transform View { get; private set; }
 
+    private SpriteRenderer m_spriteRenderer;
 
     public virtual void SetView()
     {
@@ -23,7 +24,7 @@ public class Item
             if (pool)
             {
                 View = pool.Spawn().transform;
-                // GameObject.Instantiate(prefab).transform;
+                m_spriteRenderer = View.GetComponent<SpriteRenderer>();
             }
         }
     }
@@ -39,7 +40,7 @@ public class Item
     {
         if (View == null) return;
 
-        View.DOMove(Cell.transform.position, 0.2f);
+        View.DOMove(Cell.transform.position, 0.2f).SetRecyclable(true);
     }
 
     public void SetViewPosition(Vector3 pos)
@@ -61,11 +62,10 @@ public class Item
     public void SetSortingLayerHigher()
     {
         if (View == null) return;
-
-        SpriteRenderer sp = View.GetComponent<SpriteRenderer>();
-        if (sp)
+        
+        if (m_spriteRenderer)
         {
-            sp.sortingOrder = 1;
+            m_spriteRenderer.sortingOrder = 1;
         }
     }
 
@@ -73,11 +73,10 @@ public class Item
     public void SetSortingLayerLower()
     {
         if (View == null) return;
-
-        SpriteRenderer sp = View.GetComponent<SpriteRenderer>();
-        if (sp)
+        
+        if (m_spriteRenderer)
         {
-            sp.sortingOrder = 0;
+            m_spriteRenderer.sortingOrder = 0;
         }
 
     }
@@ -88,7 +87,7 @@ public class Item
 
         Vector3 scale = View.localScale;
         View.localScale = Vector3.one * 0.1f;
-        View.DOScale(scale, 0.1f);
+        View.DOScale(scale, 0.1f).SetRecyclable(true);
     }
 
     internal virtual bool IsSameType(Item other)
@@ -106,7 +105,7 @@ public class Item
                     Recycle();
                     View = null;
                 }
-                );
+                ).SetRecyclable(true);
         }
     }
 
@@ -116,7 +115,7 @@ public class Item
     {
         if (View)
         {
-            View.DOPunchScale(View.localScale * 0.1f, 0.1f).SetLoops(-1);
+            View.DOPunchScale(View.localScale * 0.1f, 0.1f).SetLoops(-1).SetRecyclable(true);
         }
     }
 
