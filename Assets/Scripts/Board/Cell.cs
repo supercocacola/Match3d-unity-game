@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Cell : MonoBehaviour
@@ -16,6 +17,7 @@ public class Cell : MonoBehaviour
     public Cell NeighbourBottom { get; set; }
 
     public Cell NeighbourLeft { get; set; }
+    public List<Cell> neighbourCell => new List<Cell>() { NeighbourUp, NeighbourBottom, NeighbourRight, NeighbourLeft };
 
 
     public bool IsEmpty => Item == null;
@@ -54,6 +56,18 @@ public class Cell : MonoBehaviour
         }
     }
 
+    public NormalItem.eNormalType[] GetNeighboreNormalType()
+    {
+        List<NormalItem.eNormalType> types = new List<NormalItem.eNormalType>();
+        for (int i = 0; i < neighbourCell.Count; i++)
+        {
+            if (neighbourCell[i] != null && !neighbourCell[i].IsEmpty && neighbourCell[i].Item is NormalItem)
+                types.Add(((NormalItem)neighbourCell[i].Item).ItemType);
+        }
+
+        return types.ToArray();
+    }
+    
     internal void Clear()
     {
         if (Item != null)

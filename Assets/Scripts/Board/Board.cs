@@ -152,7 +152,7 @@ public class Board
 
                 NormalItem item = new NormalItem();
 
-                var type = Utils.GetRandomNormalType();
+                var type = Utils.GetRandomNormalTypeExcept(cell.GetNeighboreNormalType());
                 item.SetType(type);
                 item.SetView();
                 item.SetViewRoot(m_root);
