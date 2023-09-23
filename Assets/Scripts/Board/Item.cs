@@ -81,6 +81,12 @@ public class Item
 
     }
 
+    public void SetSprite(Sprite sprite)
+    {
+        if (sprite)
+            m_spriteRenderer.sprite = sprite;
+    }
+
     internal void ShowAppearAnimation()
     {
         if (View == null) return;

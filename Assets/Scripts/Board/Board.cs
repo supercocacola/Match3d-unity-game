@@ -25,9 +25,11 @@ public class Board
     private Transform m_root;
 
     private int m_matchMin;
+    private GameManager m_gameManager;
 
-    public Board(Transform transform, GameSettings gameSettings)
+    public Board(Transform transform, GameSettings gameSettings,GameManager gameManager)
     {
+        m_gameManager = gameManager;
         m_root = transform;
 
         m_matchMin = gameSettings.MatchesMin;
@@ -101,9 +103,11 @@ public class Board
                     }
                 }
 
-                item.SetType(Utils.GetRandomNormalTypeExcept(types.ToArray()));
+                var type = Utils.GetRandomNormalTypeExcept(types.ToArray());
+                item.SetType(type);
                 item.SetView();
                 item.SetViewRoot(m_root);
+                item.SetSprite(m_gameManager.m_itemDatas.GetItemSprite(type));
 
                 cell.Assign(item);
                 cell.ApplyItemPosition(false);
@@ -148,9 +152,11 @@ public class Board
 
                 NormalItem item = new NormalItem();
 
-                item.SetType(Utils.GetRandomNormalType());
+                var type = Utils.GetRandomNormalType();
+                item.SetType(type);
                 item.SetView();
                 item.SetViewRoot(m_root);
+                item.SetSprite(m_gameManager.m_itemDatas.GetItemSprite(type));
 
                 cell.Assign(item);
                 cell.ApplyItemPosition(true);
