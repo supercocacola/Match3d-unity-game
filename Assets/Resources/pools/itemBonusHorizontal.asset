@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: itemBonusHorizontal
   m_EditorClassIdentifier: 
   prefab: {fileID: 1645311756642076403, guid: 3e0cdf80cfc4e074c9a3869cdfef4706, type: 3}
-  capacity: 0
+  capacity: 15
   preLoad: 0
   growth: 1
   HideUnspawned: 1

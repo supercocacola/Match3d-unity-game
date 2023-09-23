@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: itemBonusVertical
   m_EditorClassIdentifier: 
   prefab: {fileID: 1645311756642076403, guid: c534205f8cc27344aad63065ee7a5fda, type: 3}
-  capacity: 0
+  capacity: 15
   preLoad: 0
   growth: 1
   HideUnspawned: 1

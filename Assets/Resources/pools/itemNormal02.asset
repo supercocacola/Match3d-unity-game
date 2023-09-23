@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: itemNormal02
   m_EditorClassIdentifier: 
   prefab: {fileID: 1645311756642076403, guid: c02be8d33867e784787a1db70d743e36, type: 3}
-  capacity: 0
+  capacity: 15
   preLoad: 0
   growth: 1
   HideUnspawned: 1
